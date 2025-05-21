@@ -24,4 +24,23 @@ public class Activitat {
         this.valorCO2 = valorCO2;
     }
 
+    /**
+     * Getters per accedir a les dades de l'activitat
+     */
+    public String getNom() {
+        return nom;
+    }
+    public LocalDate getData() {
+        return data;
+    }
+    public String getCategoria() {
+        return categoria;
+    }
+    public String getDescripcio() {
+        return descripcio;
+    }
+    public double getValorCO2() {
+        return valorCO2;
+    }
+
 }
