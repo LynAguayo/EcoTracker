@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4f9328a-99af-46fb-a2f5-2a32255531e0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ecotracker/dao/ActivityDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ecotracker/dao/ActivityDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1747389628136</updated>
       <workItem from="1747855710517" duration="775000" />
-      <workItem from="1747869267404" duration="1476000" />
+      <workItem from="1747869267404" duration="1513000" />
     </task>
     <servers />
   </component>

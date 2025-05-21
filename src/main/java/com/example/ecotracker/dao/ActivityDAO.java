@@ -73,4 +73,16 @@ public class ActivityDAO {
 
         return activities;
     }
+
+    // Elimina una activitat de la bbdd segons la ID
+    public void delete(Long id) throws SQLException {
+        String sql = "DELETE FROM sustainable_activities WHERE id = ?";
+
+        try (Connection conn = DBConnector.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setLong(1, id);
+            pstmt.executeUpdate();
+        }
+    }
 }
