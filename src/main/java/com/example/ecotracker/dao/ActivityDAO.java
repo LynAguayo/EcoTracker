@@ -49,4 +49,28 @@ public class ActivityDAO {
             }
         }
     }
+
+    // Recupera totes les activitats sostenibles ordenades per data descendent
+    public List<Activity> findAll() throws SQLException {
+        List<Activity> activities = new ArrayList<>();
+        String sql = "SELECT * FROM sustainable_activities ORDER BY date DESC";
+
+        try (Connection conn = DBConnector.getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            while (rs.next()) {
+                Activity activity = new Activity();
+                activity.setId(rs.getLong("id"));
+                activity.setName(rs.getString("name"));
+                activity.setDate(rs.getDate("date").toLocalDate());
+                activity.setCategory(rs.getString("category"));
+                activity.setDescription(rs.getString("description"));
+                activity.setCo2Saved(rs.getDouble("co2_saved"));
+                activities.add(activity);
+            }
+        }
+
+        return activities;
+    }
 }
