@@ -11,6 +11,21 @@ public class DBConnector {
     private static Connection connection = null;
 
     private DBConnector() {
-        // Constructor per preveure la instanciació
+        // Constructor per evitar la instanciació
     }
+
+    // Mètode per obtenir la connexió a la bbbdd
+    public static Connection getConnection() throws SQLException {
+        if (connection == null || connection.isClosed()) {
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            } catch (ClassNotFoundException e) {
+                throw new SQLException("MySQL JDBC Driver not found.", e);
+            }
+        }
+        return connection;
+    }
+
+
 }
