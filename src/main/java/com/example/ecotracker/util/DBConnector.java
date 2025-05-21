@@ -9,4 +9,8 @@ public class DBConnector {
     private static final String USER = "root";
     private static final String PASSWORD = "root";
     private static Connection connection = null;
+
+    private DBConnector() {
+        // Constructor per preveure la instanciació
+    }
 }
