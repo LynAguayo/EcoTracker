@@ -14,7 +14,7 @@ public class DBConnector {
         // Constructor per evitar la instanciació
     }
 
-    // Mètode per obtenir la connexió a la bbbdd
+    // Mètode per obtenir connexió amb la bbbdd
     public static Connection getConnection() throws SQLException {
         if (connection == null || connection.isClosed()) {
             try {
@@ -27,5 +27,14 @@ public class DBConnector {
         return connection;
     }
 
-
+    // Mètode per tancar connexió amb la bbdd
+    public static void closeConnection() {
+        if (connection != null) {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
