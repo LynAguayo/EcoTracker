@@ -85,4 +85,20 @@ public class ActivityDAO {
             pstmt.executeUpdate();
         }
     }
+
+    // Calcula el total de CO2 estalviat amb totes les activitats
+    public double getTotalCo2Saved() throws SQLException {
+        String sql = "SELECT SUM(co2_saved) as total FROM sustainable_activities";
+
+        try (Connection conn = DBConnector.getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            if (rs.next()) {
+                return rs.getDouble("total");
+            }
+        }
+
+        return 0.0;
+    }
 }
