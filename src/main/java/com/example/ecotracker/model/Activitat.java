@@ -43,4 +43,22 @@ public class Activitat {
         return valorCO2;
     }
 
+    /**
+     * Setters per modificar les dades de l'activitat
+     */
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+    public void setData(LocalDate data) {
+        this.data = data;
+    }
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+    public void setDescripcio(String descripcio) {
+        this.descripcio = descripcio;
+    }
+    public void setValorCO2(double valorCO2) {
+        this.valorCO2 = valorCO2;
+    }
 }
