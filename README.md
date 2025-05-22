@@ -62,7 +62,7 @@ Funcionalitats principals:
 
 ### 📎 Exemple Pràctic
 Si registrem una activitat de transport amb 5 Km:
-- Formula: 5 * 0.24 = 1.2 kg CO₂ estalviat
+- Formula: `5 * 0.24 = 1.2` kg CO₂ estalviat
 
 ## 🏗️ Arquitectura del Sistema
 ### Components Principals 
