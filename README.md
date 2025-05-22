@@ -62,7 +62,7 @@ Funcionalitats principals:
 
 ### 📎 Exemple Pràctic
 Si registrem una activitat de transport amb 5 Km:
-- Formula: 5 * 0.24 = 1.2 kg CO₂ estalviat
+- Formula: `5 * 0.24 = 1.2` kg CO₂ estalviat
 
 ## 🏗️ Arquitectura del Sistema
 ### Components Principals 
@@ -112,11 +112,10 @@ Estructura principal de la taula activitats:
 - Executar via IDE o teminal amb mvn javafx:run
 
 ### Testing
-JUnit: validació del càlcul de CO₂ i lògica de persistència
-Mockito: simulació de connexions a base de dades
+- JUnit: validació del càlcul de CO₂ i lògica de persistència
+- Mockito: simulació de connexions a base de dades
 
 ### Documentació  
 Pots consultar els diagrames i més informació de la pràctica en el següent enllaç:
 
-[Memòria del Projecte]
-(https://docs.google.com/document/d/1diTIuu18pzon1jrxgCvpry4fTz5WS3NRZ5Q9wrqoXG0/edit?usp=sharing)
+[Memòria del Projecte](https://docs.google.com/document/d/1diTIuu18pzon1jrxgCvpry4fTz5WS3NRZ5Q9wrqoXG0/edit?usp=sharing)
