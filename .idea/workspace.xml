@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4f9328a-99af-46fb-a2f5-2a32255531e0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ecotracker/controller/VisualitzarActivitatsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ecotracker/controller/VisualitzarActivitatsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/ecotracker/visualitzar-activitats.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +17,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
