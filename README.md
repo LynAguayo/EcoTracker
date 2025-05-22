@@ -231,7 +231,10 @@ Hem implementat un pla de proves complet que combina:
 
 ### Fitxers de Test Inclosos
 - `src/test/java/com/example/ecotracker/ActivitatDAOTest.java`
+  ![ActivitatDAOTest](/docs/ActivitatDAOTestResult.png)
+
 - `src/test/java/com/example/ecotracker/GraficaControllerTest.java`
+  ![GraficaControllerTest](/docs/GraficaControllerTestResult.png)
 
 ### Master Test Plan Excel
 - [Enllaç al Master Test Plan en Excel](https://docs.google.com/spreadsheets/d/1yxbmQ9fcvrkNs2QZWF8OLe201ef_YaRf/edit?usp=sharing&ouid=118312948817311622634&rtpof=true&sd=true)
