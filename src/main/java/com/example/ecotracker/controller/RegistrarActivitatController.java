@@ -137,4 +137,16 @@ public class RegistrarActivitatController {
         }
     }
 
+    /**
+     * Buida tots els camps del formulari i posa la data d'avui
+     */
+    private void clearForm() {
+        nameField.clear();
+        datePicker.setValue(java.time.LocalDate.now());
+        categoryComboBox.setValue(null);
+        descriptionArea.clear();
+        valueField.clear();
+    }
+
+
 }
