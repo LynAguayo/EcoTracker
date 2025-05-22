@@ -24,5 +24,9 @@ public class RegistrarActivitatController {
     @FXML private TextField valueField;
     @FXML private Button backButton;
 
+    /**
+     * Controlar el comportament de la finestra principal de JavaFX
+     */
+    private Stage primaryStage;
 
 }
