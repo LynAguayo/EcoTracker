@@ -14,5 +14,12 @@ import javafx.stage.Stage;
 import java.sql.SQLException;
 
 public class RegistrarActivitatController {
+    @FXML private TextField nameField;
+    @FXML private DatePicker datePicker;
+    @FXML private ComboBox<String> categoryComboBox;
+    @FXML private TextArea descriptionArea;
+    @FXML private TextField valueField;
+    @FXML private Button backButton;
+
     
 }
