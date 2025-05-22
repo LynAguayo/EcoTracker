@@ -19,6 +19,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class GraficaController {
+
     /**Gràfic de línia que mostra el CO₂ estalviat per mes*/
     @FXML
     private LineChart<String, Number> co2Chart;
