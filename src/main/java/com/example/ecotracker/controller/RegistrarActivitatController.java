@@ -12,6 +12,8 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class RegistrarActivitatController {
     // Per connectar el codi amb els elements del .fxml
@@ -55,7 +57,24 @@ public class RegistrarActivitatController {
         });
 
         // Posar la data actual per defecte
-        datePicker.setValue(java.time.LocalDate.now());
+        datePicker.setValue(LocalDate.now());
+
+        // Configurar el DatePicker para validar las fechas
+        datePicker.setDayCellFactory(picker -> new DateCell() {
+            @Override
+            public void updateItem(LocalDate date, boolean empty) {
+                super.updateItem(date, empty);
+                LocalDate today = LocalDate.now();
+                LocalDate oneMonthAgo = today.minus(1, ChronoUnit.MONTHS);
+
+                if (date != null) {
+                    if (date.isAfter(today) || date.isBefore(oneMonthAgo)) {
+                        setDisable(true);
+                        setStyle("-fx-background-color: #ffcccc;");
+                    }
+                }
+            }
+        });
     }
 
     // Gestiona l'acció de registrar una nova activitat quan l'usuari fa clic al botó "Afegir"
@@ -71,6 +90,20 @@ public class RegistrarActivitatController {
             // Comprovació de camps obligatoris
             if (name == null || name.trim().isEmpty() || date == null || category == null) {
                 showAlert("Error", "Si us plau, omple tots els camps obligatoris.");
+                return;
+            }
+
+            // Validació de la data
+            LocalDate today = LocalDate.now();
+            LocalDate oneMonthAgo = today.minus(1, ChronoUnit.MONTHS);
+
+            if (date.isAfter(today)) {
+                showAlert("Error", "No es pot registrar una activitat amb una data futura.");
+                return;
+            }
+
+            if (date.isBefore(oneMonthAgo)) {
+                showAlert("Error", "No es pot registrar una activitat amb més d'un mes d'antiguitat.");
                 return;
             }
 
@@ -119,7 +152,7 @@ public class RegistrarActivitatController {
     // Buida tots els camps del formulari i posa la data d'avui
     private void clearForm() {
         nameField.clear();
-        datePicker.setValue(java.time.LocalDate.now());
+        datePicker.setValue(LocalDate.now());
         categoryComboBox.setValue(null);
         descriptionArea.clear();
         valueField.clear();
