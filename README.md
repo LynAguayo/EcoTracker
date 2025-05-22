@@ -9,7 +9,7 @@
 ## 📖 Document Tècnic del Projecte
 
 ### Descripció General
-EcoTracker és una aplicació d'escriptori desenvolupada amb Java, JavaFX i MySQL que permet registrar i monitoritzar activitats sostenibles. La nostra aplicació té com a objectiu fomentar pràctiques ecològiques tant a nivell individual com corporatiu, calculant l'estalvi estimat de CO₂ per cada activitat registrada.
+EcoTracker és una aplicació d'escriptori desenvolupada amb Java, JavaFX i MySQL que permet registrar i monitoritzar activitats sostenibles. La nostra aplicació té com a objectiu fomentar pràctiques ecològiques a nivell individual, calculant l'estalvi estimat de CO₂ per cada activitat registrada.
 
 ### Funcionalitat Creativa
 Hem implementat una gràfica interactiva que mostra l'evolució mensual del CO₂ estalviat. Aquesta funcionalitat permet:
@@ -71,9 +71,10 @@ El sistema calcula l'estalvi de CO₂ segons la categoria de l'activitat. Quan r
 | Reutilització | Quantes vegades has reutilitzat?    | `valor * 0.4` kg CO₂                     | 2 vegades = 0.8 kg CO₂ estalviat         |
 | Altres        | Valor directe de CO₂ estalviat (kg) | Valor introduït directament              | 1.5 kg CO₂ estalviat                     |
 
-El sistema mostra automàticament el text d'ajuda adequat segons la categoria seleccionada, facilitant la introducció del valor correcte. A més, realitza validacions per assegurar que:
+El sistema mostra automàticament el text d'ajuda adequat segons la categoria seleccionada. A més, fa validacions per assegurar que:
 - El valor introduït és un número vàlid
 - No es permeten valors negatius
+- La data ha d'estar compresa entre fa 30 dies i avui (no s'admeten dates futures ni massa antigues)
 - El text d'ajuda canvia dinàmicament segons la categoria seleccionada
 
 ## 👤 Manual d'Usuari
@@ -92,11 +93,11 @@ El sistema mostra automàticament el text d'ajuda adequat segons la categoria se
 
 2. **Configuració del Projecte**:
    ```bash
-   git clone [URL del repositori]
+   git clone https://github.com/LaSalleGracia-Programacio/24-25-pr-ctica-iii-evelyn_mariona_alexandra.git
    cd ecotracker
    ```
 
-3. **Configuració de la Base de Dades**:
+3. **Configuració de la base de dades**:
    - Les credencials per defecte són:
      - Usuari: root
      - Contrasenya: root
@@ -159,7 +160,6 @@ El sistema mostra automàticament el text d'ajuda adequat segons la categoria se
 3. **Gràfica de CO₂**:
    - Seleccionar "Veure Gràfica"
    - Analitzar l'evolució mensual
-   - Interactuar amb la gràfica per més detalls
 
 ## 🧪Pla de Proves
 
@@ -200,7 +200,6 @@ Hem implementat un pla de proves complet que combina:
 
 ##### ActivitatDAOTest
 ```java
-- testCreateTable() // Verifica la creació de la taula
 - testInsert() // Comprova la inserció d'activitats
 - testFindAll() // Verifica la recuperació de totes les activitats
 - testDelete() // Comprova l'eliminació d'activitats
@@ -210,8 +209,6 @@ Hem implementat un pla de proves complet que combina:
 ##### GraficaControllerTest
 ```java
 - testCalculoCO2PorMes() // Verifica el càlcul mensual
-- testUpdateChart() // Comprova l'actualització del gràfic
-- testHandleBack() // Verifica la navegació
 ```
 
 #### Resultats Esperats
@@ -223,16 +220,15 @@ Hem implementat un pla de proves complet que combina:
 
 - **Persistència**:
   - Creació correcta de la taula
-  - Inserció exitosa d'activitats
+  - Inserció correcta d'activitats
   - Recuperació completa de dades
   - Eliminació correcta
-  - Càlculs precisos de CO₂
+  - Càlculs precisos de CO2
 
 - **Interfície**:
   - Visualització correcta de dades
   - Exportació completa a CSV
   - Gràfica actualitzada i precisa
-  - Navegació fluida
 
 ### Fitxers de Test Inclosos
 - `src/test/java/com/example/ecotracker/ActivitatDAOTest.java`
@@ -246,15 +242,9 @@ Hem implementat un pla de proves complet que combina:
 ### Gestió del Projecte
 Per a una gestió eficient del projecte, hem utilitzat:
 - **GitHub Projects**: Per organitzar i repartir les tasques entre els membres de l'equip
-- **Issues**: Per gestionar dubtes, bugs i millores del projecte
-- **Pull Requests**: Per revisar i integrar els canvis de manera controlada
+- **Issues**: Per gestionar dubtes i millores del projecte
 
 ![GitHub Projects](https://github.com/your-repo/ecotracker/blob/main/docs/github-projects.png)
-
-### Organització
-- Cada membre s'ha encarregat de desenvolupar diferents components de l'aplicació
-- Hem fet reunions diàries per sincronitzar l'evolució del projecte
-- Hem utilitzat el sistema d'issues per documentar i resoldre problemes
 
 ## 🖼️ Vistes de l'Aplicació
 
@@ -263,7 +253,6 @@ L'aplicació consta de quatre vistes principals:
 1. **Menú Principal**
    ![Menú Principal](https://github.com/your-repo/ecotracker/blob/main/docs/menu-principal.png)
    - Accés a totes les funcionalitats
-   - Resum de l'estalvi total de CO₂
 
 2. **Registre d'Activitats**
    ![Registre](https://github.com/your-repo/ecotracker/blob/main/docs/registre-activitats.png)
@@ -278,4 +267,3 @@ L'aplicació consta de quatre vistes principals:
 4. **Gràfica de CO₂**
    ![Gràfica](https://github.com/your-repo/ecotracker/blob/main/docs/grafica-co2.png)
    - Evolució mensual de l'estalvi de CO₂
-   - Visualització interactiva
