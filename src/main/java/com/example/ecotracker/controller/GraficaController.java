@@ -80,7 +80,7 @@ public class GraficaController {
     private void updateChart() {
         try {
             List<Activitat> activities = dao.findAll();
-            co2Char t.getData().clear();
+            co2Chart.getData().clear();
 
             // Agrupa les activitats per mes i suma el CO₂ estalviat
             Map<String, Double> monthlyData = activities.stream()

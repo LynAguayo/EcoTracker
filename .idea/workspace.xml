@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4f9328a-99af-46fb-a2f5-2a32255531e0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ecotracker/visualitzar-activitats.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ecotracker/visualitzar-activitats.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="e4f9328a-99af-46fb-a2f5-2a32255531e0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +39,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.EcoTrackerApp.executor": "Run",
     "Application.HelloApplication.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
@@ -49,7 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/visualitzar-activitats",
+    "git-widget-placeholder": "feature/grafica",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/level/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar",
     "node.js.detected.package.eslint": "true",
@@ -63,13 +62,20 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
-      </set>
-    </attachedChunks>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="24-25-pr-ctica-iii-evelyn_mariona_alexandra" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="24-25-pr-ctica-iii-evelyn_mariona_alexandra" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
