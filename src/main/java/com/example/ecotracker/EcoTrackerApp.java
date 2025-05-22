@@ -2,6 +2,7 @@ package com.example.ecotracker;
 
 import com.example.ecotracker.controller.MenuInicialController;
 import com.example.ecotracker.dao.ActivitatDAO;
+import com.example.ecotracker.util.DataInitializer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -20,6 +21,10 @@ public class EcoTrackerApp extends Application {
         try {
             ActivitatDAO dao = new ActivitatDAO();
             dao.createTable();
+
+            // Inicialitza les dades de prova si la taula està buida
+            DataInitializer dataInitializer = new DataInitializer();
+            dataInitializer.initializeData();
         } catch (SQLException e) {
             e.printStackTrace();
             // TODO: Mostrar diàleg d'error a l'usuari si no es pot accedir a la base de dades
@@ -33,7 +38,7 @@ public class EcoTrackerApp extends Application {
         MenuInicialController controller = fxmlLoader.getController();
         controller.setPrimaryStage(stage);
 
-        // Configura i mostra la finestra principal 
+        // Configura i mostra la finestra principal
         stage.setTitle("EcoTracker - Seguiment d'Impacte Ambiental");
         stage.setScene(scene);
         stage.show();
