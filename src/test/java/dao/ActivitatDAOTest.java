@@ -140,3 +140,20 @@ class ActivitatDAOTest {
             assertEquals(4.2, total, 0.001);
         }
     }
+
+    @Test
+    void testDelete() throws SQLException {
+        try (MockedStatic<DBConnector> mocked = Mockito.mockStatic(DBConnector.class)) {
+            mocked.when(DBConnector::getConnection).thenReturn(mockConnection);
+
+            when(mockPreparedStatement.executeUpdate()).thenReturn(1);
+
+            // Intentem eliminar una activitat amb id = 1
+            activitatDAO.delete(Integer.valueOf(1));
+
+            // Verifiquem que es va preparar i executar la sentència amb el paràmetre correcte
+            verify(mockPreparedStatement).setInt(1, 1);
+            verify(mockPreparedStatement).executeUpdate();
+        }
+    }
+}
