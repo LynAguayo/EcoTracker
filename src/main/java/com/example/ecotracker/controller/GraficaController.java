@@ -61,27 +61,40 @@ public class GraficaController {
         }
     }
 
+    // Calcula el CO2 total per mes a partir d'una llista d'activitats
+    public double[] calcularCO2PerMes(List<Activitat> activitats) {
+        double[] co2PerMes = new double[12];
+        for (Activitat act : activitats) {
+            int mesIndex = act.getDate().getMonthValue() - 1;
+            co2PerMes[mesIndex] += act.getCo2Saved();
+        }
+        return co2PerMes;
+    }
+
     // Actualitza el gràfic de CO2 amb les dades de la base de dades.
     private void updateChart() {
         try {
             List<Activitat> activities = dao.findAll();
             co2Chart.getData().clear();
 
-            // Agrupa les activitats per mes i suma el CO₂ estalviat
-            Map<String, Double> monthlyData = activities.stream()
-                    .collect(Collectors.groupingBy(
-                            activity -> activity.getDate().getMonth().getDisplayName(TextStyle.FULL, new Locale("ca")),
-                            Collectors.summingDouble(Activitat::getCo2Saved)
-                    ));
+            String[] mesos = {
+                    "gener", "febrer", "març", "abril", "maig", "juny",
+                    "juliol", "agost", "setembre", "octubre", "novembre", "desembre"
+            };
+
+            double[] co2PorMes = calcularCO2PerMes(activities);
 
             XYChart.Series<String, Number> series = new XYChart.Series<>();
-            series.setName("CO₂ estalviat per mes");
+            series.setName("CO2 estalviat per mes");
 
-            monthlyData.forEach((month, co2) ->
-                    series.getData().add(new XYChart.Data<>(month, co2))
-            );
+            for (int i = 0; i < 12; i++) {
+                if (co2PorMes[i] > 0) {
+                    series.getData().add(new XYChart.Data<>(mesos[i], co2PorMes[i]));
+                }
+            }
 
             co2Chart.getData().add(series);
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
