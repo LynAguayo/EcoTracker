@@ -87,15 +87,13 @@ public class VisualitzarActivitatsController {
     private void handleExportCSV() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Exportar a CSV");
-        fileChooser.getExtensionFilters().add(
-                new FileChooser.ExtensionFilter("CSV Files", "*.csv")
-        );
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("CSV Files", "*.csv"));
         File file = fileChooser.showSaveDialog(activitiesTable.getScene().getWindow());
 
         if (file != null) {
             try (FileWriter writer = new FileWriter(file)) {
                 // Write header
-                writer.write("Nom,Data,Categoria,Descripció,CO₂ estalviat (kg)\n");
+                writer.write("Nom,Data,Categoria,Descripcio,CO2 estalviat (kg)\n");
 
                 // Write data
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
