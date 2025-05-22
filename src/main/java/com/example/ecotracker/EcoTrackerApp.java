@@ -27,7 +27,6 @@ public class EcoTrackerApp extends Application {
             dataInitializer.initializeData();
         } catch (SQLException e) {
             e.printStackTrace();
-            // TODO: Mostrar diàleg d'error a l'usuari si no es pot accedir a la base de dades
         }
 
         // Carrega la interfície del menú inicial
