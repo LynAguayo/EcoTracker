@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivityDAO {
+public class ActivitatDAO {
     // Crea la taula sustainable_activities si no existeix a la bbdd
     public void createTable() throws SQLException {
         String sql = """
