@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4f9328a-99af-46fb-a2f5-2a32255531e0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/ecotracker/controller/GraficaControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ecotracker/visualitzar-activitats.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ecotracker/visualitzar-activitats.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +17,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -52,7 +52,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "testing",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/level/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar",
     "list.type.of.created.stylesheet": "CSS",
@@ -87,7 +87,7 @@
       <workItem from="1747869267404" duration="1543000" />
       <workItem from="1747915561793" duration="425000" />
       <workItem from="1747917434183" duration="2046000" />
-      <workItem from="1747920917370" duration="3759000" />
+      <workItem from="1747920917370" duration="3995000" />
     </task>
     <servers />
   </component>
