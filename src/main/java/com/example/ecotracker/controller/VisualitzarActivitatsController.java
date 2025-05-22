@@ -81,3 +81,36 @@ public class VisualitzarActivitatsController {
         // Load initial data
         refreshData();
     }
+
+    // Gestiona l'exportació de les activitats a un fitxer CSV
+    @FXML
+    private void handleExportCSV() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Exportar a CSV");
+        fileChooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter("CSV Files", "*.csv")
+        );
+        File file = fileChooser.showSaveDialog(activitiesTable.getScene().getWindow());
+
+        if (file != null) {
+            try (FileWriter writer = new FileWriter(file)) {
+                // Write header
+                writer.write("Nom,Data,Categoria,Descripció,CO₂ estalviat (kg)\n");
+
+                // Write data
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                for (Activitat activitat : activities) {
+                    writer.write(String.format("%s,%s,%s,%s,%.2f\n",
+                            activitat.getName(),
+                            activitat.getDate().format(formatter),
+                            activitat.getCategory(),
+                            activitat.getDescription(),
+                            activitat.getCo2Saved()
+                    ));
+                }
+                showAlert("Èxit", "Dades exportades correctament.");
+            } catch (IOException e) {
+                showAlert("Error", "No s'ha pogut exportar el fitxer: " + e.getMessage());
+            }
+        }
+    }
