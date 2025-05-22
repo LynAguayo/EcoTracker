@@ -30,3 +30,8 @@
                     onAction="#handleRegistrarActivitat"
                     style="-fx-background-color: #0c8006; -fx-text-fill: white; -fx-font-size: 16px; -fx-min-width: 300px; -fx-min-height: 50px; -fx-background-radius: 5;"/>
 
+            <Button text="Visualitzar activitats registrades"
+                    onAction="#handleVisualitzarActivitats"
+                    style="-fx-background-color: #0c8006; -fx-text-fill: white; -fx-font-size: 16px; -fx-min-width: 300px; -fx-min-height: 50px; -fx-background-radius: 5;"/>
+
+
