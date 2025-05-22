@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Activitat {
     // Atributs
-    private Long id;
+    private Integer id;
     private String name;
     private LocalDate date;
     private String category;
@@ -25,11 +25,11 @@ public class Activitat {
     }
 
     // Getters i setters
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
