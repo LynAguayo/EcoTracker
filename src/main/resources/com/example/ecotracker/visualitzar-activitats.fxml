@@ -22,3 +22,11 @@
         <Button text="← Tornar" onAction="#handleBack" style="-fx-background-color: #0c8006; -fx-text-fill: white;"/>
         <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Visualitzar Activitats Registrades"/>
     </HBox>
+
+    <!-- Secció amb la informació total de CO2 i botó per exportar a CSV -->
+    <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 5;">
+        <Label text="Total CO2 estalviat:" style="-fx-font-size: 16px;"/>
+        <Text fx:id="totalCo2Text" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Exportar a CSV" onAction="#handleExportCSV" style="-fx-background-color: #0c8006; -fx-text-fill: white;"/>
+    </HBox>
