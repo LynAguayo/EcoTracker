@@ -252,7 +252,6 @@ L'aplicació consta de quatre vistes principals:
 1. **Menú Principal**
    ![Menú Principal](/docs/menu-inicial.png)
    - Accés a totes les funcionalitats
-   - Resum de l'estalvi total de CO₂
 
 2. **Registre d'Activitats**
    ![Registre](/docs/registrar-actvitat.png)
@@ -267,4 +266,3 @@ L'aplicació consta de quatre vistes principals:
 4. **Gràfica de CO₂**
    ![Gràfica](/docs/grafica-co2-estalviat.png)
    - Evolució mensual de l'estalvi de CO₂
-   - Visualització interactiva
