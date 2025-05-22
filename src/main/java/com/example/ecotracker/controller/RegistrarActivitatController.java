@@ -115,4 +115,26 @@ public class RegistrarActivitatController {
         }
     }
 
+    /**
+     * Torna a la pantalla del menú principal
+     * Carrega el FXML corresponent
+     * Passa el Stage al controlador del menú inicial
+     * Mostra l'escena del menú
+     */
+    @FXML
+    private void handleBack() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/ecotracker/menu-inicial.fxml"));
+            Parent root = loader.load();
+            MenuInicialController controller = loader.getController();
+            controller.setPrimaryStage(primaryStage);
+
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.setTitle("EcoTracker - Menú Principal");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
