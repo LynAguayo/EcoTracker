@@ -19,3 +19,7 @@
         <ImageView fitWidth="200" fitHeight="200" preserveRatio="true">
             <Image url="@img/logo.png"/>
         </ImageView>
+
+        <!-- Títol i subtítol -->
+        <Text style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-fill: #0c8006;" text="EcoTracker"/>
+        <Text style="-fx-font-size: 18px; -fx-fill: #096505;" text="Seguiment d'Impacte Ambiental"/>
