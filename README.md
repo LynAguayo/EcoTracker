@@ -9,14 +9,13 @@
 ## 📖 Document Tècnic del Projecte
 
 ### Descripció General
-EcoTracker és una aplicació d'escriptori desenvolupada amb Java, JavaFX i MySQL que permet registrar i monitoritzar activitats sostenibles. La nostra aplicació té com a objectiu fomentar pràctiques ecològiques a nivell individual, calculant l'estalvi estimat de CO₂ per cada activitat registrada.
+EcoTracker és una aplicació d'escriptori desenvolupada amb Java, JavaFX i MySQL que permet registrar i monitoritzar activitats sostenibles. La nostra aplicació té com a objectiu fomentar pràctiques ecològiques a nivell individual, calculant l'estalvi estimat de CO2 per cada activitat registrada.
 
 ### Funcionalitat Creativa
-Hem implementat una gràfica interactiva que mostra l'evolució mensual del CO₂ estalviat. Aquesta funcionalitat permet:
+Hem implementat una gràfica interactiva que mostra l'evolució mensual del CO2 estalviat. Aquesta funcionalitat permet:
 - Visualitzar l'evolució temporal de l'impacte ambiental
-- Motivar els usuaris a mantenir hàbits sostenibles
 - Analitzar tendències en el temps
-- Exportar les dades per a anàlisis posteriors
+- Exportar les dades en format CSV
 
 ### Estructura del Projecte
 El projecte segueix el patró MVC (Model-Vista-Controlador):
@@ -25,13 +24,15 @@ El projecte segueix el patró MVC (Model-Vista-Controlador):
 - **Model**: `Activitat.java` - Representa una activitat sostenible
 - **Vista**: Fitxers FXML i CSS per la interfície d'usuari
 - **Controlador**: 
+  - `MenuInicialController.java`
   - `RegistrarActivitatController.java`
   - `VisualitzarActivitatsController.java`
   - `GraficaController.java`
 - **Utilitats**:
-  - `CO2Calculator.java` - Càlculs d'estalvi de CO₂
+  - `CO2Calculator.java` - Càlculs d'estalvi de CO2
   - `DBConnector.java` - Gestió de la connexió a la base de dades
-  - `ActivitatDAO.java` - Accés a dades
+  - `DataInitializer.java` - Per insertar 10 activitats d'exemple a la taula sustainable_activities
+- **Dao**: `ActivitatDAO.java` - Accés a dades
 
 ### Diagrama de Classes
 ![Diagrama de Classes](/docs/diagrama-clases.png)
@@ -263,6 +264,6 @@ L'aplicació consta de quatre vistes principals:
    - Taula amb totes les activitats registrades
    - Opció d'exportar a CSV
 
-4. **Gràfica de CO₂**
+4. **Gràfica de CO2**
    ![Gràfica](/docs/grafica-co2-estalviat.png)
    - Evolució mensual de l'estalvi de CO₂
