@@ -29,3 +29,13 @@ public class VisualitzarActivitatsController {
 
     // Taula que mostra les activitats registrades
     @FXML private TableView<Activitat> activitiesTable;
+
+    // Columnes de la taula per mostrar els atributs de les activitats
+    @FXML private TableColumn<Activitat, String> nameColumn;
+    @FXML private TableColumn<Activitat, LocalDate> dateColumn;
+    @FXML private TableColumn<Activitat, String> categoryColumn;
+    @FXML private TableColumn<Activitat, String> descriptionColumn;
+    @FXML private TableColumn<Activitat, Double> co2Column;
+    @FXML private TableColumn<Activitat, Void> actionsColumn;
+    @FXML private Button backButton;
+
