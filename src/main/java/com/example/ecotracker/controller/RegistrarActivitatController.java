@@ -74,5 +74,45 @@ public class RegistrarActivitatController {
         datePicker.setValue(java.time.LocalDate.now());
     }
 
+    /**
+     * Gestiona l'acció de registrar una nova activitat quan l'usuari fa clic al botó "Afegir"
+     * Valida que els camps no estiguin buits
+     * Calcula el Co2 estalviat amb la categoria i valor introduït
+     * Desa l'activitat a la base de dades
+     * Mostra un missatge de confirmació o d'error
+     */
+    @FXML
+    private void handleAddActivity() {
+        try {
+            String name = nameField.getText();
+            var date = datePicker.getValue();
+            String category = categoryComboBox.getValue();
+            String description = descriptionArea.getText();
+            double value = Double.parseDouble(valueField.getText());
+
+            // Comprovació de camps obligatoris
+            if (name == null || name.trim().isEmpty() || date == null || category == null) {
+                showAlert("Error", "Si us plau, omple tots els camps obligatoris.");
+                return;
+            }
+
+            // Calcula el Co2 estalviat segons la categoria
+            double co2Saved = CO2Calculator.calculateCO2(category, value);
+
+            // Crea l'objecte i el desa a la base de dades
+            Activitat activitat = new Activitat(name, date, category, description, co2Saved);
+            dao.insert(activitat);
+
+            // Neteja el formulari
+            clearForm();
+
+            // Missatge d'èxit
+            showAlert("Èxit", "Activitat registrada correctament.");
+        } catch (NumberFormatException e) {
+            showAlert("Error", "El valor ha de ser un número vàlid.");
+        } catch (SQLException e) {
+            showAlert("Error", "No s'ha pogut guardar l'activitat: " + e.getMessage());
+        }
+    }
 
 }
