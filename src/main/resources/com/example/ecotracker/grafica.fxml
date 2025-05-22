@@ -21,5 +21,13 @@
         <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Gràfica de CO₂ estalviat per mes"/>
     </HBox>
 
+    <LineChart fx:id="co2Chart" VBox.vgrow="ALWAYS" style="-fx-background-color: white; -fx-background-radius: 5;">
+        <xAxis>
+            <CategoryAxis label="Mes"/>
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="CO2 estalviat (kg)"/>
+        </yAxis>
+    </LineChart>
 
 </VBox>
