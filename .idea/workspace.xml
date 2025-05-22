@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4f9328a-99af-46fb-a2f5-2a32255531e0" name="Changes" comment="" />
+    <list default="true" id="e4f9328a-99af-46fb-a2f5-2a32255531e0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ecotracker/dao/ActivitatDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ecotracker/dao/ActivitatDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ecotracker/model/Activitat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ecotracker/model/Activitat.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +43,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.EcoTrackerApp.executor&quot;: &quot;Run&quot;,
     &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
@@ -80,6 +85,7 @@
       <workItem from="1747855710517" duration="775000" />
       <workItem from="1747869267404" duration="1543000" />
       <workItem from="1747915561793" duration="425000" />
+      <workItem from="1747917434183" duration="547000" />
     </task>
     <servers />
   </component>

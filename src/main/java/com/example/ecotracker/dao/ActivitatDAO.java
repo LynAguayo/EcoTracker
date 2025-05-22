@@ -1,6 +1,6 @@
 package com.example.ecotracker.dao;
 
-import com.example.ecotracker.model.Activity;
+import com.example.ecotracker.model.Activitat;
 import com.example.ecotracker.util.DBConnector;
 
 import java.sql.*;
@@ -28,31 +28,31 @@ public class ActivitatDAO {
     }
 
     // Insereix una nova activitat sostenible a la bbdd
-    public void insert(Activity activity) throws SQLException {
+    public void insert(Activitat activitat) throws SQLException {
         String sql = "INSERT INTO sustainable_activities (name, date, category, description, co2_saved) VALUES (?, ?, ?, ?, ?)";
 
         try (Connection conn = DBConnector.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
 
-            pstmt.setString(1, activity.getName());
-            pstmt.setDate(2, Date.valueOf(activity.getDate()));
-            pstmt.setString(3, activity.getCategory());
-            pstmt.setString(4, activity.getDescription());
-            pstmt.setDouble(5, activity.getCo2Saved());
+            pstmt.setString(1, activitat.getName());
+            pstmt.setDate(2, Date.valueOf(activitat.getDate()));
+            pstmt.setString(3, activitat.getCategory());
+            pstmt.setString(4, activitat.getDescription());
+            pstmt.setDouble(5, activitat.getCo2Saved());
 
             pstmt.executeUpdate();
 
             try (ResultSet generatedKeys = pstmt.getGeneratedKeys()) {
                 if (generatedKeys.next()) {
-                    activity.setId(generatedKeys.getLong(1));
+                    activitat.setId(generatedKeys.getLong(1));
                 }
             }
         }
     }
 
     // Recupera totes les activitats sostenibles ordenades per data descendent
-    public List<Activity> findAll() throws SQLException {
-        List<Activity> activities = new ArrayList<>();
+    public List<Activitat> findAll() throws SQLException {
+        List<Activitat> activities = new ArrayList<>();
         String sql = "SELECT * FROM sustainable_activities ORDER BY date DESC";
 
         try (Connection conn = DBConnector.getConnection();
@@ -60,14 +60,14 @@ public class ActivitatDAO {
              ResultSet rs = stmt.executeQuery(sql)) {
 
             while (rs.next()) {
-                Activity activity = new Activity();
-                activity.setId(rs.getLong("id"));
-                activity.setName(rs.getString("name"));
-                activity.setDate(rs.getDate("date").toLocalDate());
-                activity.setCategory(rs.getString("category"));
-                activity.setDescription(rs.getString("description"));
-                activity.setCo2Saved(rs.getDouble("co2_saved"));
-                activities.add(activity);
+                Activitat activitat = new Activitat();
+                activitat.setId(rs.getLong("id"));
+                activitat.setName(rs.getString("name"));
+                activitat.setDate(rs.getDate("date").toLocalDate());
+                activitat.setCategory(rs.getString("category"));
+                activitat.setDescription(rs.getString("description"));
+                activitat.setCo2Saved(rs.getDouble("co2_saved"));
+                activities.add(activitat);
             }
         }
 

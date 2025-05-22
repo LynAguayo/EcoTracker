@@ -7,71 +7,77 @@ import java.time.LocalDate;
  * Cada activitat té un id, un nom, una data, una categoria, una descripció i un valor estimat de CO2 estalviat.
  */
 public class Activitat {
-    private Long id; // id de l'activitat
-    private String name; // nom de l'activitat
-    private LocalDate date; // data en què s'ha realitzat l'activitat
-    private String category; // categoria de l'activitat
-    private String description; // descripció de l'activitat
-    private double co2Saved; // quantitat estimada de C=2 estalviat durant l'activitat
+    /*
+    * Atributs
+    * */
+    private Long id;
+    private String name;
+    private LocalDate date;
+    private String category;
+    private String description;
+    private double co2Saved;
 
-    /**
-     * Constructor vuit per evitar instancies
-     */
     public Activitat() {
-
     }
 
     /**
      * Constructor per inicialitzar una activitat amb tots els seus camps.
      */
-    public Activitat(String nom, LocalDate data, String categoria, String descripcio, double valorCO2) {
+    public Activitat(String name, LocalDate date, String category, String description, double co2Saved) {
         this.name = name;
         this.date = date;
-        this.category = categoria;
-        this.description = descripcio;
-        this.co2Saved = valorCO2;
+        this.category = category;
+        this.description = description;
+        this.co2Saved = co2Saved;
     }
 
     /**
-     * Getters per accedir a les dades de l'activitat
+     * Getters i setters
      */
-    public Long getId(){
+    public Long getId() {
         return id;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public LocalDate getDate() {
         return date;
     }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
     public String getCategory() {
         return category;
     }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
     public String getDescription() {
         return description;
     }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public double getCo2Saved() {
         return co2Saved;
     }
 
-    /**
-     * Setters per modificar les dades de l'activitat
-     */
-    public void setId() {
-        this.id = id;
-    }
-    public void setNom(String nom) {
-        this.name = name;
-    }
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-    public void setCategory(String category) {
-        this.category = category;
-    }
-    public void setDescription(String description) {
-        this.description = description;
-    }
     public void setCo2Saved(double co2Saved) {
         this.co2Saved = co2Saved;
     }
