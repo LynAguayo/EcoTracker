@@ -74,6 +74,12 @@ public class RegistrarActivitatController {
                 return;
             }
 
+            // Comprovació de valor negatiu
+            if (value < 0) {
+                showAlert("Error", "No es permeten valors negatius.");
+                return;
+            }
+
             // Calcula el Co2 estalviat segons la categoria
             double co2Saved = CO2Calculator.calculateCO2(category, value);
 
