@@ -11,3 +11,14 @@
       fx:controller="com.example.ecotracker.controller.VisualitzarActivitatsController"
       spacing="20"
       style="-fx-background-color: #f5f5f5;">
+
+    <!-- Marges per separar el contingut de les vores -->
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Barra superior amb botó per tornar i títol -->
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Button text="← Tornar" onAction="#handleBack" style="-fx-background-color: #0c8006; -fx-text-fill: white;"/>
+        <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Visualitzar Activitats Registrades"/>
+    </HBox>
