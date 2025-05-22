@@ -12,8 +12,12 @@ import java.sql.SQLException;
 
 public class EcoTrackerApp extends Application {
 
+    /**
+     * Mètode principal que inicia l'aplicació
+     * JavaFX crida el mètode start() automàticament
+     */
     public static void main(String[] args) {
-        launch(args);
+        launch();
     }
 
     @Override
