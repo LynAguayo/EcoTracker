@@ -10,7 +10,7 @@
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.ecotracker.controller.VisualitzarActivitatsController"
       spacing="20"
-      style="-fx-background-color: #f5f5f5;">
+      stylesheets="@css/styles.css">
 
     <!-- Marges per separar el contingut de les vores -->
     <padding>
@@ -19,20 +19,20 @@
 
     <!-- Barra superior amb botó per tornar -->
     <HBox alignment="CENTER_LEFT" spacing="10">
-        <Button text="← Tornar" onAction="#handleBack" style="-fx-background-color: #0c8006; -fx-text-fill: white;"/>
-        <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Visualitzar Activitats Registrades"/>
+        <Button text="← Tornar" onAction="#handleBack"/>
+        <Text styleClass="title-text" text="Visualitzar Activitats Registrades"/>
     </HBox>
 
     <!-- Secció amb la informació total de CO2 i botó per exportar a CSV -->
-    <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 5;">
-        <Label text="Total CO2 estalviat:" style="-fx-font-size: 16px;"/>
-        <Text fx:id="totalCo2Text" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+    <HBox spacing="10" alignment="CENTER_LEFT" styleClass="total-co2-section">
+        <Label text="Total CO2 estalviat:" styleClass="total-co2-label"/>
+        <Text fx:id="totalCo2Text" styleClass="total-co2-value"/>
         <Region HBox.hgrow="ALWAYS"/>
-        <Button text="Exportar a CSV" onAction="#handleExportCSV" style="-fx-background-color: #0c8006; -fx-text-fill: white;"/>
+        <Button text="Exportar a CSV" onAction="#handleExportCSV"/>
     </HBox>
 
     <!-- Taula per mostrar la llista d'activitats registrades -->
-    <TableView fx:id="activitiesTable" VBox.vgrow="ALWAYS" style="-fx-background-color: white; -fx-background-radius: 5;">
+    <TableView fx:id="activitiesTable" VBox.vgrow="ALWAYS">
         <columns>
             <TableColumn fx:id="nameColumn" text="Nom" prefWidth="150"/>
             <TableColumn fx:id="dateColumn" text="Data" prefWidth="100"/>
