@@ -21,14 +21,14 @@ jobs:
           cache: maven
 
       - name: Run tests with Maven
-        run: mvn test  # Ejecuta solo los tests, no el empaquetado
+        run: mvn test
 
       - name: Upload JUnit test reports
-        uses: actions/upload-artifact@v3
-        if: always()  # Sube informes aunque fallen
+        uses: actions/upload-artifact@v4  # ¡Versión actualizada a v4!
+        if: always()
         with:
           name: test-results
-          path: target/surefire-reports/*.xml  # Ruta de informes de JUnit
+          path: target/surefire-reports/*.xml
 
       # Opcional: Mostrar resultados en la interfaz de GitHub
       - name: Publish Test Results
