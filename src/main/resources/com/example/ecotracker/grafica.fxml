@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Importació de components necessaris de JavaFX -->
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.CategoryAxis?>
+
+<!-- Contenidor principal en vertical amb controlador associat -->
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.ecotracker.controller.GraficaController"
+      spacing="20"
+      style="-fx-background-color: #f5f5f5;">
+
+    <!-- Marge intern del VBox per donar espai als seus elements -->
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Capçalera: conté el botó per tornar enrere i el títol de la vista -->
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Button text="← Tornar" onAction="#handleBack" style="-fx-background-color: #0c8006; -fx-text-fill: white;"/>
+        <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Gràfica de CO₂ estalviat per mes"/>
+    </HBox>
+
+    <!-- Gràfic de línies per mostrar el CO₂ estalviat per mes -->
+    <LineChart fx:id="co2Chart" VBox.vgrow="ALWAYS" style="-fx-background-color: white; -fx-background-radius: 5;">
+        <xAxis>
+            <CategoryAxis label="Mes"/>
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="CO2 estalviat (kg)"/>
+        </yAxis>
+    </LineChart>
+
+</VBox>
