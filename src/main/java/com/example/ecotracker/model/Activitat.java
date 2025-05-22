@@ -75,4 +75,16 @@ public class Activitat {
     public void setCo2Saved(double co2Saved) {
         this.co2Saved = co2Saved;
     }
+
+    @Override
+    public String toString() {
+        return "SustainableActivity{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", date=" + date +
+                ", category='" + category + '\'' +
+                ", description='" + description + '\'' +
+                ", co2Saved=" + co2Saved +
+                '}';
+    }
 }
