@@ -10,4 +10,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class MenuInicialController {
+    private Stage primaryStage;
+
 }
