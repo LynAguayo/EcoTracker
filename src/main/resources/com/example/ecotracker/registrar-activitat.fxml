@@ -11,7 +11,7 @@
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.ecotracker.controller.RegistrarActivitatController"
       spacing="20"
-      style="-fx-background-color: #f5f5f5;">
+      stylesheets="@css/styles.css">
 
     <!--Marges interns del VBox-->
     <padding>
@@ -20,12 +20,12 @@
 
     <!--Capçalera amb botó de tornada i títol-->
     <HBox alignment="CENTER_LEFT" spacing="10">
-        <Button text="← Tornar" onAction="#handleBack" style="-fx-background-color: #0c8006; -fx-text-fill: white;"/>
-        <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Registrar Activitat Sostenible"/>
+        <Button text="← Tornar" onAction="#handleBack"/>
+        <Text styleClass="title-text" text="Registrar Activitat Sostenible"/>
     </HBox>
 
     <!--Formulari d'entrada dins un GridPane (disposició en taula)-->
-    <GridPane vgap="15" hgap="10" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 5;">
+    <GridPane vgap="15" hgap="10" styleClass="white-container">
 
         <!--Nom de l'activitat-->
         <Label text="Nom:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
@@ -51,7 +51,6 @@
     <!--Botó per afegir l'activitat-->
     <Button text="Afegir Activitat"
             onAction="#handleAddActivity"
-            style="-fx-background-color: #0c8006; -fx-text-fill: white; -fx-font-size: 16px; -fx-min-width: 200px;"
-            alignment="CENTER"
-    />
+            styleClass="menu-button"
+            alignment="CENTER"/>
 </VBox>
