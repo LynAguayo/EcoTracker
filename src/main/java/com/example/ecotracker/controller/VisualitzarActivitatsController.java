@@ -39,3 +39,11 @@ public class VisualitzarActivitatsController {
     @FXML private TableColumn<Activitat, Void> actionsColumn;
     @FXML private Button backButton;
 
+    private Stage primaryStage;
+    private final ActivitatDAO dao = new ActivitatDAO();
+    private final ObservableList<Activitat> activities = FXCollections.observableArrayList();
+
+    // Assigna la finestra principal
+    public void setPrimaryStage(Stage primaryStage) {
+        this.primaryStage = primaryStage;
+    }
