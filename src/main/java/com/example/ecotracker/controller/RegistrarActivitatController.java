@@ -43,4 +43,36 @@ public class RegistrarActivitatController {
     public void setPrimaryStage(Stage primaryStage) {
         this.primaryStage = primaryStage;
     }
+
+    /**
+     * Inicialitza els elements de la interfície quan es carrega la pantalla.
+     * Omple el desplegable de categories
+     * Afegeix un listener per mostrar una ajuda (prompt) segons la categoria
+     * Estableix la data actual per defecte
+     */
+    @FXML
+    public void initialize() {
+        // Inicialitza el desplegable amb les categories predefinides
+        categoryComboBox.setItems(FXCollections.observableArrayList(
+                "Transport",
+                "Teletreball",
+                "Reciclatge",
+                "Energia",
+                "Consum local",
+                "Reutilització",
+                "Altres"
+        ));
+
+        // Canviar el text d'ajuda del camp de valor segons la categoria escollida
+        categoryComboBox.valueProperty().addListener((obs, oldVal, newVal) -> {
+            if (newVal != null) {
+                valueField.setPromptText(CO2Calculator.getInputPrompt(newVal));
+            }
+        });
+
+        // Posar la data actual per defecte
+        datePicker.setValue(java.time.LocalDate.now());
+    }
+
+
 }
