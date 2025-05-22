@@ -24,4 +24,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class VisualitzarActivitatsController {
-}
+    // Referència a l'etiqueta de text per mostrar el total de CO2 estalviat
+    @FXML private Text totalCo2Text;
+
+    // Taula que mostra les activitats registrades
+    @FXML private TableView<Activitat> activitiesTable;
