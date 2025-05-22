@@ -233,7 +233,7 @@ Hem implementat un pla de proves complet que combina:
 - `src/test/java/com/example/ecotracker/GraficaControllerTest.java`
 
 ### Master Test Plan Excel
-[Enllaç al Master Test Plan en Excel](https://docs.google.com/spreadsheets/d/1diTIuu18pzon1jrxgCvpry4fTz5WS3NRZ5Q9wrqoXG0/edit?usp=sharing)
+[Enllaç al Master Test Plan en Excel](https://docs.google.com/spreadsheets/d/1yxbmQ9fcvrkNs2QZWF8OLe201ef_YaRf/edit?usp=sharing&ouid=118312948817311622634&rtpof=true&sd=true)
 
 ## 👥 Treball en Equip
 

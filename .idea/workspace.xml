@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4f9328a-99af-46fb-a2f5-2a32255531e0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/diagrama-clases.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/github-projects.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/grafica-co2-estalviat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/issues.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/menu-inicial.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/registrar-actvitat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/visualitzar-activitats.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +98,7 @@
       <workItem from="1747917434183" duration="2046000" />
       <workItem from="1747920917370" duration="4476000" />
       <workItem from="1747939318421" duration="339000" />
-      <workItem from="1747944069638" duration="1892000" />
+      <workItem from="1747944069638" duration="2203000" />
     </task>
     <servers />
   </component>
