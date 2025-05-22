@@ -28,4 +28,21 @@ public class CO2Calculator {
         };
     }
 
+    /**
+     * Retorna un text d'ajuda personalitzat per a cada categoria, que es mostra com a indicació al formulari d'entrada
+     * @param category La categoria seleccionada
+     * @return Text d'ajuda per guiar l'usuari
+     */
+    public static String getInputPrompt(String category) {
+        return switch (category) {
+            case "Transport" -> "¿Quants km has recorregut?";
+            case "Teletreball" -> "¿Quants dies has teletreballat?";
+            case "Reciclatge" -> "¿Quants kg has reciclat?";
+            case "Energia" -> "¿Quantes hores ho has mantingut apagat?";
+            case "Consum local" -> "¿Quants productes locals has comprat?";
+            case "Reutilització" -> "¿Quantes vegades has reutilitzat alguna cosa?";
+            case "Altres" -> "Introdueix el valor de CO2 estalviat (kg):";
+            default -> "Introdueix un valor:";
+        };
+    }
 }
