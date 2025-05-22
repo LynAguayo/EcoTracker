@@ -6,6 +6,7 @@ import com.example.ecotracker.util.DataInitializer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -27,6 +28,18 @@ public class EcoTrackerApp extends Application {
             dataInitializer.initializeData();
         } catch (SQLException e) {
             e.printStackTrace();
+            // Mostra un diàleg d'error a l'usuari
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error de Base de Dades");
+            alert.setHeaderText("No s'ha pogut inicialitzar la base de dades");
+            alert.setContentText("Si us plau, verifica que:\n" +
+                    "1. XAMPP està en execució\n" +
+                    "2. MySQL està actiu\n" +
+                    "3. Les credencials són correctes\n\n" +
+                    "Error: " + e.getMessage());
+            alert.showAndWait();
+            // Tanca l'aplicació després de mostrar l'error
+            System.exit(1);
         }
 
         // Carrega la interfície del menú inicial
