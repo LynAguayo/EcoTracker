@@ -1,5 +1,6 @@
-package com.example.ecotracker.dao;
+package com.example.ecotracker;
 
+import com.example.ecotracker.dao.ActivitatDAO;
 import com.example.ecotracker.model.Activitat;
 import com.example.ecotracker.util.DBConnector;
 import org.junit.jupiter.api.BeforeEach;

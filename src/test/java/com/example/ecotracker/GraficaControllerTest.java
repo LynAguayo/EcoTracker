@@ -1,4 +1,4 @@
-package com.example.ecotracker.controller;
+package com.example.ecotracker;
 
 import com.example.ecotracker.controller.GraficaController;
 import com.example.ecotracker.model.Activitat;
