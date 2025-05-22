@@ -34,9 +34,7 @@ El projecte segueix el patró MVC (Model-Vista-Controlador):
   - `ActivitatDAO.java` - Accés a dades
 
 ### Diagrama de Classes
-```
-[Espai reservat per al diagrama de classes]
-```
+![Diagrama de Classes](/docs/diagrama-clases.png)
 
 ### Base de Dades
 Utilitzem MySQL com a sistema de gestió de base de dades. L'estructura principal és:
@@ -242,28 +240,37 @@ Hem implementat un pla de proves complet que combina:
 ### Gestió del Projecte
 Per a una gestió eficient del projecte, hem utilitzat:
 - **GitHub Projects**: Per organitzar i repartir les tasques entre els membres de l'equip
-- **Issues**: Per gestionar dubtes i millores del projecte
+- **Issues**: Per gestionar dubtes, bugs i millores del projecte
+- **Pull Requests**: Per revisar i integrar els canvis de manera controlada
 
-![GitHub Projects](https://github.com/your-repo/ecotracker/blob/main/docs/github-projects.png)
+![GitHub Projects](/docs/github-projects.png)
+![Issues](/docs/issues.png)
+
+### Organització
+Per a una gestió eficient del projecte, hem utilitzat:
+- **GitHub Projects**: Per organitzar i repartir les tasques entre els membres de l'equip
+- **Issues**: Per gestionar dubtes i millores del projecte
 
 ## 🖼️ Vistes de l'Aplicació
 
 L'aplicació consta de quatre vistes principals:
 
 1. **Menú Principal**
-   ![Menú Principal](https://github.com/your-repo/ecotracker/blob/main/docs/menu-principal.png)
+   ![Menú Principal](/docs/menu-inicial.png)
    - Accés a totes les funcionalitats
+   - Resum de l'estalvi total de CO₂
 
 2. **Registre d'Activitats**
-   ![Registre](https://github.com/your-repo/ecotracker/blob/main/docs/registre-activitats.png)
+   ![Registre](/docs/registrar-actvitat.png)
    - Formulari per introduir noves activitats
    - Validació en temps real dels camps
 
 3. **Visualització d'Activitats**
-   ![Visualització](https://github.com/your-repo/ecotracker/blob/main/docs/visualitzacio-activitats.png)
+   ![Visualització](/docs/visualitzar-activitats.png)
    - Taula amb totes les activitats registrades
    - Opció d'exportar a CSV
 
 4. **Gràfica de CO₂**
-   ![Gràfica](https://github.com/your-repo/ecotracker/blob/main/docs/grafica-co2.png)
+   ![Gràfica](/docs/grafica-co2-estalviat.png)
    - Evolució mensual de l'estalvi de CO₂
+   - Visualització interactiva
