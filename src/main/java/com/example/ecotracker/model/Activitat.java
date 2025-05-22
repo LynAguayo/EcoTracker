@@ -2,14 +2,8 @@ package com.example.ecotracker.model;
 
 import java.time.LocalDate;
 
-/**
- * Aquesta classe representa una activitat sostenible.
- * Cada activitat té un id, un nom, una data, una categoria, una descripció i un valor estimat de CO2 estalviat.
- */
 public class Activitat {
-    /*
-    * Atributs
-    * */
+    // Atributs
     private Long id;
     private String name;
     private LocalDate date;
@@ -17,12 +11,11 @@ public class Activitat {
     private String description;
     private double co2Saved;
 
+    // Constructor buit
     public Activitat() {
     }
 
-    /**
-     * Constructor per inicialitzar una activitat amb tots els seus camps.
-     */
+    // Constructor per inicialitzar una activitat amb tots els seus camps
     public Activitat(String name, LocalDate date, String category, String description, double co2Saved) {
         this.name = name;
         this.date = date;
@@ -31,9 +24,7 @@ public class Activitat {
         this.co2Saved = co2Saved;
     }
 
-    /**
-     * Getters i setters
-     */
+    // Getters i setters
     public Long getId() {
         return id;
     }

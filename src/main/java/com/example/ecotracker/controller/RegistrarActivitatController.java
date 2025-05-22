@@ -14,9 +14,7 @@ import javafx.stage.Stage;
 import java.sql.SQLException;
 
 public class RegistrarActivitatController {
-    /**
-     * Connectar el codi amb els elements visuals del fitxer .fxml
-     */
+    // Per connectar el codi amb els elements del .fxml
     @FXML private TextField nameField;
     @FXML private DatePicker datePicker;
     @FXML private ComboBox<String> categoryComboBox;
@@ -24,32 +22,18 @@ public class RegistrarActivitatController {
     @FXML private TextField valueField;
     @FXML private Button backButton;
 
-    /**
-     * Controlar el comportament de la finestra principal de JavaFX
-     */
+    // Controla el comportament de la finestra principal
     private Stage primaryStage;
 
-    /**
-     * Permet llegir/escriure activitats a la base de dades
-     */
+    // Permet llegir/escriure activitats a la base de dades
     private final ActivitatDAO dao = new ActivitatDAO();
 
-    /**
-     * Assigna la finestra principal (Stage) de l'aplicació a aquest controller.
-     * Això permet accedir al Stage des d'altres mètodes i canvia escenes o tancar la finestra.
-     *
-     * @param primaryStage La finestra principal de JavaFX
-     */
+    // Assigna la finestra principal (Stage)
     public void setPrimaryStage(Stage primaryStage) {
         this.primaryStage = primaryStage;
     }
 
-    /**
-     * Inicialitza els elements de la interfície quan es carrega la pantalla.
-     * Omple el desplegable de categories
-     * Afegeix un listener per mostrar una ajuda (prompt) segons la categoria
-     * Estableix la data actual per defecte
-     */
+    // Inicialitza els elements de la interfície i demana els attributs per el model activitat
     @FXML
     public void initialize() {
         // Inicialitza el desplegable amb les categories predefinides
@@ -74,13 +58,7 @@ public class RegistrarActivitatController {
         datePicker.setValue(java.time.LocalDate.now());
     }
 
-    /**
-     * Gestiona l'acció de registrar una nova activitat quan l'usuari fa clic al botó "Afegir"
-     * Valida que els camps no estiguin buits
-     * Calcula el Co2 estalviat amb la categoria i valor introduït
-     * Desa l'activitat a la base de dades
-     * Mostra un missatge de confirmació o d'error
-     */
+    // Gestiona l'acció de registrar una nova activitat quan l'usuari fa clic al botó "Afegir"
     @FXML
     private void handleAddActivity() {
         try {
@@ -115,12 +93,7 @@ public class RegistrarActivitatController {
         }
     }
 
-    /**
-     * Torna a la pantalla del menú principal
-     * Carrega el FXML corresponent
-     * Passa el Stage al controlador del menú inicial
-     * Mostra l'escena del menú
-     */
+    // Torna a la pantalla del menú principal
     @FXML
     private void handleBack() {
         try {
@@ -137,9 +110,7 @@ public class RegistrarActivitatController {
         }
     }
 
-    /**
-     * Buida tots els camps del formulari i posa la data d'avui
-     */
+    // Buida tots els camps del formulari i posa la data d'avui
     private void clearForm() {
         nameField.clear();
         datePicker.setValue(java.time.LocalDate.now());
@@ -148,11 +119,7 @@ public class RegistrarActivitatController {
         valueField.clear();
     }
 
-    /**
-     * Mostra un diàleg emergent amb el missatge indicat
-     * @param title Títol de la finestra
-     * @param content Missatge a mostrar
-     */
+    // Mostra una alerta d'informació amb el missatge
     private void showAlert(String title, String content) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);

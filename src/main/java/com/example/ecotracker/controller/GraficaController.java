@@ -20,42 +20,31 @@ import java.util.stream.Collectors;
 
 public class GraficaController {
 
-    /**Gràfic de línia que mostra el CO₂ estalviat per mes*/
+    // Gràfic de línia que mostra el CO2 estalviat per mes
     @FXML
     private LineChart<String, Number> co2Chart;
 
-    /**Botó per tornar al menú inicial*/
+    // Botó per tornar al menú inicial
     @FXML private Button backButton;
 
-    /**Controlar el comportament de la finestra principal de JavaFX*/
+    // Controlar el comportament de la finestra principal
     private Stage primaryStage;
 
-    /**Permet llegir/escriure activitats a la base de dade*/
+    // Permet llegir/escriure activitats a la base de dades
     private final ActivitatDAO dao = new ActivitatDAO();
 
-    /**
-     * Assigna la finestra principal (Stage) de l'aplicació a aquest controller.
-     * Això permet accedir al Stage des d'altres mètodes i canvia escenes o tancar la finestra.
-     *
-     * @param primaryStage La finestra principal de JavaFX
-     */
+    // Assigna la finestra principal
     public void setPrimaryStage(Stage primaryStage) {
         this.primaryStage = primaryStage;
     }
 
-    /**
-     * Inicialitza el controlador després de carregar-se la vista.
-     * Carrega les dades del gràfic.
-     */
+    // Inicialitza el controlador i carrega les dades del gràfic
     @FXML
     public void initialize() {
         updateChart();
     }
 
-    /**
-     * Gestor de l'acció del botó per tornar al menú inicial.
-     * Canvia l'escena a la vista principal del menú.
-     */
+    // Funció per tornar al menú inicial
     @FXML
     private void handleBack() {
         try {
@@ -72,11 +61,7 @@ public class GraficaController {
         }
     }
 
-    /**
-     * Actualitza el gràfic de CO₂ amb les dades de la base de dades.
-     * Agrupa les activitats per mes i suma el CO₂ estalviat.
-     * A continuació, mostra aquestes dades al gràfic de línia.
-     */
+    // Actualitza el gràfic de CO2 amb les dades de la base de dades.
     private void updateChart() {
         try {
             List<Activitat> activities = dao.findAll();

@@ -11,25 +11,9 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class EcoTrackerApp extends Application {
-
-    /**
-     * Mètode principal que inicia l'aplicació
-     * JavaFX crida el mètode start() automàticament
-     */
     public static void main(String[] args) {
         launch();
     }
-
-
-    /**
-     * Aquest mètode s'executa quan s'inicia l'aplicació JavaFX.
-     * Inicialitza la base de dades (crea la taula si no existeix)
-     * Carrega la interfície gràfica del menú principal des de l'FXML
-     * Assigna el controlador i mostra la finestra principal
-     *
-     * @param stage La finestra principa de JavaFX
-     * @throws IOException Si falla la càrrega del fitxer FXML
-     */
     @Override
     public void start(Stage stage) throws IOException {
         // Inicialitza la base de dades i crea la taula si cal
@@ -41,7 +25,7 @@ public class EcoTrackerApp extends Application {
             // TODO: Mostrar diàleg d'error a l'usuari si no es pot accedir a la base de dades
         }
 
-        // Carrega la interfície del menú inicial des del fitxer FXML
+        // Carrega la interfície del menú inicial
         FXMLLoader fxmlLoader = new FXMLLoader(EcoTrackerApp.class.getResource("menu-inicial.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
 
