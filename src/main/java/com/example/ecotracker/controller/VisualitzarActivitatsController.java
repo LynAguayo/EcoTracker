@@ -47,3 +47,37 @@ public class VisualitzarActivitatsController {
     public void setPrimaryStage(Stage primaryStage) {
         this.primaryStage = primaryStage;
     }
+
+    // Inicialitza la taula, les seves columnes i carrega les dades inicials
+    @FXML
+    public void initialize() {
+        // Initialize table columns
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
+        categoryColumn.setCellValueFactory(new PropertyValueFactory<>("category"));
+        descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
+        co2Column.setCellValueFactory(new PropertyValueFactory<>("co2Saved"));
+
+        // Add delete button to actions column
+        actionsColumn.setCellFactory(col -> new TableCell<>() {
+            private final Button deleteButton = new Button("Eliminar");
+            {
+                deleteButton.setOnAction(event -> {
+                    Activitat activitat = getTableView().getItems().get(getIndex());
+                    handleDeleteActivity(activitat);
+                });
+            }
+
+            @Override
+            protected void updateItem(Void item, boolean empty) {
+                super.updateItem(item, empty);
+                setGraphic(empty ? null : deleteButton);
+            }
+        });
+
+        // Set table data
+        activitiesTable.setItems(activities);
+
+        // Load initial data
+        refreshData();
+    }
