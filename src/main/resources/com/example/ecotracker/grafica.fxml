@@ -14,7 +14,7 @@
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.ecotracker.controller.GraficaController"
       spacing="20"
-      style="-fx-background-color: #f5f5f5;">
+      stylesheets="@css/styles.css">
 
     <!-- Marge intern del VBox per donar espai als seus elements -->
     <padding>
@@ -23,12 +23,12 @@
 
     <!-- Capçalera: conté el botó per tornar enrere i el títol de la vista -->
     <HBox alignment="CENTER_LEFT" spacing="10">
-        <Button text="← Tornar" onAction="#handleBack" style="-fx-background-color: #0c8006; -fx-text-fill: white;"/>
-        <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Gràfica de CO₂ estalviat per mes"/>
+        <Button text="← Tornar" onAction="#handleBack"/>
+        <Text styleClass="title-text" text="Gràfica de CO₂ estalviat per mes"/>
     </HBox>
 
     <!-- Gràfic de línies per mostrar el CO₂ estalviat per mes -->
-    <LineChart fx:id="co2Chart" VBox.vgrow="ALWAYS" style="-fx-background-color: white; -fx-background-radius: 5;">
+    <LineChart fx:id="co2Chart" VBox.vgrow="ALWAYS" styleClass="line-chart">
         <xAxis>
             <CategoryAxis label="Mes"/>
         </xAxis>

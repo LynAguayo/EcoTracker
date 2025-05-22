@@ -1,0 +1,69 @@
+.root {
+    -fx-background-color: #f5f5f5;
+}
+
+.button {
+    -fx-background-color: #0c8006;
+    -fx-text-fill: white;
+}
+
+.title-text {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* Estil per el menú inicial */
+.menu-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-fill: #0c8006;
+}
+
+.menu-subtitle {
+    -fx-font-size: 18px;
+    -fx-fill: #096505;
+}
+
+.menu-button {
+    -fx-background-color: #0c8006;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-min-width: 300px;
+    -fx-min-height: 50px;
+    -fx-background-radius: 5;
+}
+
+/* Estil per contenidors */
+.white-container {
+    -fx-background-color: white;
+    -fx-padding: 20;
+    -fx-background-radius: 5;
+}
+
+/* Estil per la taula */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+}
+
+/* Estil pel gràfic */
+.line-chart {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+}
+
+/* Estil per la secció de total CO2 */
+.total-co2-section {
+    -fx-background-color: white;
+    -fx-padding: 15;
+    -fx-background-radius: 5;
+}
+
+.total-co2-label {
+    -fx-font-size: 16px;
+}
+
+.total-co2-value {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}

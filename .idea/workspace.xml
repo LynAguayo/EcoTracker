@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e4f9328a-99af-46fb-a2f5-2a32255531e0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ecotracker/EcoTrackerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ecotracker/EcoTrackerApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ecotracker/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ecotracker/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ecotracker/grafica.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ecotracker/grafica.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +19,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -54,6 +56,7 @@
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/level/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,7 +88,7 @@
       <workItem from="1747869267404" duration="1543000" />
       <workItem from="1747915561793" duration="425000" />
       <workItem from="1747917434183" duration="2046000" />
-      <workItem from="1747920917370" duration="3349000" />
+      <workItem from="1747920917370" duration="3651000" />
     </task>
     <servers />
   </component>
