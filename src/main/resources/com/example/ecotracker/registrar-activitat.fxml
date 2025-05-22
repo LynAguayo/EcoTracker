@@ -43,9 +43,15 @@
         <Label text="Descripció:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
         <TextArea fx:id="descriptionArea" prefRowCount="3" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 
-        <!--Valor de Co2 estalviat--> 
+        <!--Valor de Co2 estalviat-->
         <Label text="Valor:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
         <TextField fx:id="valueField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
     </GridPane>
 
+    <!--Botó per afegir l'activitat-->
+    <Button text="Afegir Activitat"
+            onAction="#handleAddActivity"
+            style="-fx-background-color: #0c8006; -fx-text-fill: white; -fx-font-size: 16px; -fx-min-width: 200px;"
+            alignment="CENTER"
+    />
 </VBox>
