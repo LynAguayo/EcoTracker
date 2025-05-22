@@ -1,4 +1,4 @@
-# 🚗 EcoTracker - Seguiment d'Activitats Sostenibles
+# 🌱 EcoTracker - Seguiment d'Activitats Sostenibles
 ## 📚 Taula de Continguts
 
 1. [Introducció](#📖-introducció)
@@ -119,4 +119,4 @@ Mockito: simulació de connexions a base de dades
 Pots consultar els diagrames i més informació de la pràctica en el següent enllaç:
 
 [Memòria del Projecte]
-(https://drive.google.com/drive/folders/1OIrgoN6beNaCk8GnM53KYzOkXDZ6NURK?usp=sharing)
+(https://docs.google.com/document/d/1diTIuu18pzon1jrxgCvpry4fTz5WS3NRZ5Q9wrqoXG0/edit?usp=sharing)
