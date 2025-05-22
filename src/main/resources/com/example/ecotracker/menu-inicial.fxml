@@ -34,4 +34,8 @@
                     onAction="#handleVisualitzarActivitats"
                     style="-fx-background-color: #0c8006; -fx-text-fill: white; -fx-font-size: 16px; -fx-min-width: 300px; -fx-min-height: 50px; -fx-background-radius: 5;"/>
 
-
+            <Button text="Visualitzar gràfica amb total de CO2"
+                    onAction="#handleVisualitzarGrafica"
+                    style="-fx-background-color: #0c8006; -fx-text-fill: white; -fx-font-size: 16px; -fx-min-width: 300px; -fx-min-height: 50px; -fx-background-radius: 5;"/>
+        </VBox>
+    </VBox>
