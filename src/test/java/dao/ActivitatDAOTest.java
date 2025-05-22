@@ -116,3 +116,27 @@ class ActivitatDAOTest {
             assertEquals(LocalDate.of(2025, 1, 25), second.getDate());
         }
     }
+
+    /**
+     * Test que comprova el càlcul total de CO2 estalviat a partir de la base de dades.
+     */
+    @Test
+    void testGetTotalCo2Saved() throws SQLException {
+        try (MockedStatic<DBConnector> mocked = Mockito.mockStatic(DBConnector.class)) {
+            // Simulem connexió a la base de dades
+            mocked.when(DBConnector::getConnection).thenReturn(mockConnection);
+
+            // Simulem l'execució de la consulta SQL que retorna la suma total
+            when(mockStatement.executeQuery(anyString())).thenReturn(mockResultSet);
+            when(mockResultSet.next()).thenReturn(true);
+
+            // Simulem que el resultat és 4.2
+            when(mockResultSet.getDouble("total")).thenReturn(4.2);
+
+            // Obtenim el total cridant el DAO
+            double total = activitatDAO.getTotalCo2Saved();
+
+            // Comprovem que el total és correcte (amb tolerància 0.001)
+            assertEquals(4.2, total, 0.001);
+        }
+    }
