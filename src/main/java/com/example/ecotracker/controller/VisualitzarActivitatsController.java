@@ -131,3 +131,14 @@ public class VisualitzarActivitatsController {
             e.printStackTrace();
         }
     }
+
+    // Elimina una activitat de la bbdd i actualitza la taula
+    private void handleDeleteActivity(Activitat activitat) {
+        try {
+            dao.delete(activitat.getId());
+            refreshData();
+            showAlert("Èxit", "Activitat eliminada correctament.");
+        } catch (SQLException e) {
+            showAlert("Error", "No s'ha pogut eliminar l'activitat: " + e.getMessage());
+        }
+    }
