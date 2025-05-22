@@ -11,4 +11,10 @@
       fx:controller="com.example.ecotracker.controller.GraficaController"
       spacing="20"
       style="-fx-background-color: #f5f5f5;">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+
 </VBox>
