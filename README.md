@@ -234,8 +234,8 @@ Hem implementat un pla de proves complet que combina:
 - `src/test/java/com/example/ecotracker/GraficaControllerTest.java`
 
 ### Master Test Plan Excel
-[Enllaç al Master Test Plan en Excel](https://docs.google.com/spreadsheets/d/1yxbmQ9fcvrkNs2QZWF8OLe201ef_YaRf/edit?usp=sharing&ouid=118312948817311622634&rtpof=true&sd=true)
-[Enllaç a la presentació Canva](https://www.canva.com/design/DAGoM_tb3pI/5VqHAiA2XA8l46BN_MP5sg/view?utm_content=DAGoM_tb3pI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3e0eb9188f)
+- [Enllaç al Master Test Plan en Excel](https://docs.google.com/spreadsheets/d/1yxbmQ9fcvrkNs2QZWF8OLe201ef_YaRf/edit?usp=sharing&ouid=118312948817311622634&rtpof=true&sd=true)
+- [Enllaç a la presentació Canva](https://www.canva.com/design/DAGoM_tb3pI/5VqHAiA2XA8l46BN_MP5sg/view?utm_content=DAGoM_tb3pI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3e0eb9188f)
 
 ## 👥 Treball en Equip
 
