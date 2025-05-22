@@ -12,3 +12,10 @@
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.ecotracker.controller.MenuInicialController"
       style="-fx-background-color: white;">
+
+    <!-- Contenidor vertical centrat amb espai i padding -->
+    <VBox alignment="CENTER" spacing="20" style="-fx-background-color: white; -fx-padding: 30;" HBox.hgrow="ALWAYS">
+        <!-- Logo -->
+        <ImageView fitWidth="200" fitHeight="200" preserveRatio="true">
+            <Image url="@img/logo.png"/>
+        </ImageView>
