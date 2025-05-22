@@ -17,7 +17,7 @@
         <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
-    <!-- Barra superior amb botó per tornar i títol -->
+    <!-- Barra superior amb botó per tornar -->
     <HBox alignment="CENTER_LEFT" spacing="10">
         <Button text="← Tornar" onAction="#handleBack" style="-fx-background-color: #0c8006; -fx-text-fill: white;"/>
         <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Visualitzar Activitats Registrades"/>
@@ -30,3 +30,17 @@
         <Region HBox.hgrow="ALWAYS"/>
         <Button text="Exportar a CSV" onAction="#handleExportCSV" style="-fx-background-color: #0c8006; -fx-text-fill: white;"/>
     </HBox>
+
+    <!-- Taula per mostrar la llista d'activitats registrades -->
+    <TableView fx:id="activitiesTable" VBox.vgrow="ALWAYS" style="-fx-background-color: white; -fx-background-radius: 5;">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Nom" prefWidth="150"/>
+            <TableColumn fx:id="dateColumn" text="Data" prefWidth="100"/>
+            <TableColumn fx:id="categoryColumn" text="Categoria" prefWidth="120"/>
+            <TableColumn fx:id="descriptionColumn" text="Descripció" prefWidth="200"/>
+            <TableColumn fx:id="co2Column" text="CO2 estalviat (kg)" prefWidth="120"/>
+            <TableColumn fx:id="actionsColumn" text="Accions" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+</VBox>
