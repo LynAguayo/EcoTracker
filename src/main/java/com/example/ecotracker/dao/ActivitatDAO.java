@@ -12,7 +12,7 @@ public class ActivitatDAO {
     public void createTable() throws SQLException {
         String sql = """
             CREATE TABLE IF NOT EXISTS sustainable_activities (
-                id BIGINT PRIMARY KEY AUTO_INCREMENT,
+                id INT PRIMARY KEY AUTO_INCREMENT,
                 name VARCHAR(255) NOT NULL,
                 date DATE NOT NULL,
                 category VARCHAR(100) NOT NULL,
@@ -44,7 +44,7 @@ public class ActivitatDAO {
 
             try (ResultSet generatedKeys = pstmt.getGeneratedKeys()) {
                 if (generatedKeys.next()) {
-                    activitat.setId(generatedKeys.getLong(1));
+                    activitat.setId(generatedKeys.getInt(1));
                 }
             }
         }
@@ -61,7 +61,7 @@ public class ActivitatDAO {
 
             while (rs.next()) {
                 Activitat activitat = new Activitat();
-                activitat.setId(rs.getLong("id"));
+                activitat.setId(rs.getInt("id"));
                 activitat.setName(rs.getString("name"));
                 activitat.setDate(rs.getDate("date").toLocalDate());
                 activitat.setCategory(rs.getString("category"));
@@ -75,13 +75,13 @@ public class ActivitatDAO {
     }
 
     // Elimina una activitat de la bbdd segons la ID
-    public void delete(Long id) throws SQLException {
+    public void delete(Integer id) throws SQLException {
         String sql = "DELETE FROM sustainable_activities WHERE id = ?";
 
         try (Connection conn = DBConnector.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-            pstmt.setLong(1, id);
+            pstmt.setInt(1, id);
             pstmt.executeUpdate();
         }
     }
