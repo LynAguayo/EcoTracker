@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e4f9328a-99af-46fb-a2f5-2a32255531e0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dao/ActivitatDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/ActivitatDAOTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,14 +44,16 @@
   "keyToString": {
     "Application.EcoTrackerApp.executor": "Run",
     "Application.HelloApplication.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
+    "Downloaded.Files.Path.Enabled": "true",
+    "JUnit.ActivitatDAOTest.executor": "Run",
+    "JUnit.GraficaControllerTest.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "testing",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/level/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar",
     "list.type.of.created.stylesheet": "CSS",
@@ -61,7 +62,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
