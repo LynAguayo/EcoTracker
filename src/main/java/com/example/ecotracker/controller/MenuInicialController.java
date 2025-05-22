@@ -32,4 +32,21 @@ public class MenuInicialController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        // Obre la finestra per visualitzar totes les activitats registrades
+        @FXML
+        private void handleVisualitzarActivitats() {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/ecotracker/visualitzar-activitats.fxml"));
+                Parent root = loader.load();
+                VisualitzarActivitatsController controller = loader.getController();
+                controller.setPrimaryStage(primaryStage);
+
+                Scene scene = new Scene(root);
+                primaryStage.setScene(scene);
+                primaryStage.setTitle("Visualitzar Activitats");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
