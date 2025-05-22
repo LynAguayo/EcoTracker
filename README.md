@@ -66,7 +66,7 @@ El sistema calcula l'estalvi de CO₂ segons la categoria de l'activitat. Quan r
 | Transport     | Quants km has recorregut?           | `valor * 0.24` kg CO₂                    | 10 km = 2.4 kg CO₂ estalviat             |
 | Teletreball   | Quants dies has teletreballat?      | `valor * 1.8` kg CO₂                     | 2 dies = 3.6 kg CO₂ estalviat            |
 | Reciclatge    | Quants kg has reciclat?             | `valor * 1.0` kg CO₂                     | 5 kg = 5.0 kg CO₂ estalviat              |
-| Energia       | Quantes hores ho has mantingut apagat? | `valor * 0.15` kg CO₂                 | 4 hores = 0.6 kg CO₂ estalviat           |
+| Energia       | Quantes hores ho has mantenit apagat? | `valor * 0.15` kg CO₂                 | 4 hores = 0.6 kg CO₂ estalviat           |
 | Consum local  | Quants productes locals has comprat? | `valor * 0.5` kg CO₂                    | 3 productes = 1.5 kg CO₂ estalviat       |
 | Reutilització | Quantes vegades has reutilitzat?    | `valor * 0.4` kg CO₂                     | 2 vegades = 0.8 kg CO₂ estalviat         |
 | Altres        | Valor directe de CO₂ estalviat (kg) | Valor introduït directament              | 1.5 kg CO₂ estalviat                     |
@@ -240,3 +240,42 @@ Hem implementat un pla de proves complet que combina:
 
 ### Master Test Plan Excel
 [Enllaç al Master Test Plan en Excel](https://docs.google.com/spreadsheets/d/1diTIuu18pzon1jrxgCvpry4fTz5WS3NRZ5Q9wrqoXG0/edit?usp=sharing)
+
+## 👥 Treball en Equip
+
+### Gestió del Projecte
+Per a una gestió eficient del projecte, hem utilitzat:
+- **GitHub Projects**: Per organitzar i repartir les tasques entre els membres de l'equip
+- **Issues**: Per gestionar dubtes, bugs i millores del projecte
+- **Pull Requests**: Per revisar i integrar els canvis de manera controlada
+
+![GitHub Projects](https://github.com/your-repo/ecotracker/blob/main/docs/github-projects.png)
+
+### Organització
+- Cada membre s'ha encarregat de desenvolupar diferents components de l'aplicació
+- Hem fet reunions diàries per sincronitzar l'evolució del projecte
+- Hem utilitzat el sistema d'issues per documentar i resoldre problemes
+
+## 🖼️ Vistes de l'Aplicació
+
+L'aplicació consta de quatre vistes principals:
+
+1. **Menú Principal**
+   ![Menú Principal](https://github.com/your-repo/ecotracker/blob/main/docs/menu-principal.png)
+   - Accés a totes les funcionalitats
+   - Resum de l'estalvi total de CO₂
+
+2. **Registre d'Activitats**
+   ![Registre](https://github.com/your-repo/ecotracker/blob/main/docs/registre-activitats.png)
+   - Formulari per introduir noves activitats
+   - Validació en temps real dels camps
+
+3. **Visualització d'Activitats**
+   ![Visualització](https://github.com/your-repo/ecotracker/blob/main/docs/visualitzacio-activitats.png)
+   - Taula amb totes les activitats registrades
+   - Opció d'exportar a CSV
+
+4. **Gràfica de CO₂**
+   ![Gràfica](https://github.com/your-repo/ecotracker/blob/main/docs/grafica-co2.png)
+   - Evolució mensual de l'estalvi de CO₂
+   - Visualització interactiva
