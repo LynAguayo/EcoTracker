@@ -19,4 +19,14 @@ public class GraficaController {
 
     /**Permet llegir/escriure activitats a la base de dade*/
     private final ActivitatDAO dao = new ActivitatDAO();
+
+    /**
+     * Assigna la finestra principal (Stage) de l'aplicació a aquest controller.
+     * Això permet accedir al Stage des d'altres mètodes i canvia escenes o tancar la finestra.
+     *
+     * @param primaryStage La finestra principal de JavaFX
+     */
+    public void setPrimaryStage(Stage primaryStage) {
+        this.primaryStage = primaryStage;
+    }
 }
