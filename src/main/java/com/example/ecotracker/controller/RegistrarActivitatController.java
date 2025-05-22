@@ -148,5 +148,16 @@ public class RegistrarActivitatController {
         valueField.clear();
     }
 
-
+    /**
+     * Mostra un diàleg emergent amb el missatge indicat
+     * @param title Títol de la finestra
+     * @param content Missatge a mostrar
+     */
+    private void showAlert(String title, String content) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
 }
