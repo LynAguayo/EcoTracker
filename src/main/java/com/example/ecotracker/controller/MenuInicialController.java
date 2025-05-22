@@ -62,7 +62,7 @@ public class MenuInicialController {
 
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
-            primaryStage.setTitle("Gràfica CO₂ per Mes");
+            primaryStage.setTitle("Gràfica CO2 per Mes");
         } catch (IOException e) {
             e.printStackTrace();
         }
