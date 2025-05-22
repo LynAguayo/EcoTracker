@@ -1,13 +1,22 @@
 package com.example.ecotracker.controller;
 
 import com.example.ecotracker.dao.ActivitatDAO;
+import com.example.ecotracker.model.Activitat;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+
+import java.sql.SQLException;
+import java.time.format.TextStyle;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class GraficaController {
     /**Gràfic de línia que mostra el CO₂ estalviat per mes*/
@@ -61,7 +70,34 @@ public class GraficaController {
             e.printStackTrace();
         }
     }
-    private void updateChart() {}
 
+    /**
+     * Actualitza el gràfic de CO₂ amb les dades de la base de dades.
+     * Agrupa les activitats per mes i suma el CO₂ estalviat.
+     * A continuació, mostra aquestes dades al gràfic de línia.
+     */
+    private void updateChart() {
+        try {
+            List<Activitat> activities = dao.findAll();
+            co2Char t.getData().clear();
 
+            // Agrupa les activitats per mes i suma el CO₂ estalviat
+            Map<String, Double> monthlyData = activities.stream()
+                    .collect(Collectors.groupingBy(
+                            activity -> activity.getDate().getMonth().getDisplayName(TextStyle.FULL, new Locale("ca")),
+                            Collectors.summingDouble(Activitat::getCo2Saved)
+                    ));
+
+            XYChart.Series<String, Number> series = new XYChart.Series<>();
+            series.setName("CO₂ estalviat per mes");
+
+            monthlyData.forEach((month, co2) ->
+                    series.getData().add(new XYChart.Data<>(month, co2))
+            );
+
+            co2Chart.getData().add(series);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
