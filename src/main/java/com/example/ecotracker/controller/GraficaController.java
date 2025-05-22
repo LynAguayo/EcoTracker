@@ -29,4 +29,12 @@ public class GraficaController {
     public void setPrimaryStage(Stage primaryStage) {
         this.primaryStage = primaryStage;
     }
+
+    @FXML
+    public void initialize() {
+        updateChart();
+    }
+
+    private void updateChart() {}
+
 }
