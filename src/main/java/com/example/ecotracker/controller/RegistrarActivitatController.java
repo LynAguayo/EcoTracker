@@ -29,4 +29,10 @@ public class RegistrarActivitatController {
      */
     private Stage primaryStage;
 
+    /**
+     * Permet llegir/escriure activitats a la base de dades
+     */
+    private final ActivitatDAO dao = new ActivitatDAO();
+
+    
 }
