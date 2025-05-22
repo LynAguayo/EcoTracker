@@ -160,7 +160,7 @@ El sistema mostra automàticament el text d'ajuda adequat segons la categoria se
    - Seleccionar "Veure Gràfica"
    - Analitzar l'evolució mensual
 
-## 🧪Pla de Proves
+## 🧪 Pla de Proves
 
 ### Eines de Testing
 Per implementar les nostres proves, hem utilitzat:
@@ -235,6 +235,7 @@ Hem implementat un pla de proves complet que combina:
 
 ### Master Test Plan Excel
 [Enllaç al Master Test Plan en Excel](https://docs.google.com/spreadsheets/d/1yxbmQ9fcvrkNs2QZWF8OLe201ef_YaRf/edit?usp=sharing&ouid=118312948817311622634&rtpof=true&sd=true)
+[Enllaç a la presentació Canva](https://www.canva.com/design/DAGoM_tb3pI/5VqHAiA2XA8l46BN_MP5sg/view?utm_content=DAGoM_tb3pI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3e0eb9188f)
 
 ## 👥 Treball en Equip
 
