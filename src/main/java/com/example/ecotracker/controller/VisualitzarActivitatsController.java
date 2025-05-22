@@ -114,3 +114,20 @@ public class VisualitzarActivitatsController {
             }
         }
     }
+
+    // Torna al menú inicial
+    @FXML
+    private void handleBack() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/ecotracker/menu-inicial.fxml"));
+            Parent root = loader.load();
+            MenuInicialController controller = loader.getController();
+            controller.setPrimaryStage(primaryStage);
+
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.setTitle("EcoTracker - Menú Principal");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
