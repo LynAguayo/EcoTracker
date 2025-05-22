@@ -23,3 +23,10 @@
         <!-- Títol i subtítol -->
         <Text style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-fill: #0c8006;" text="EcoTracker"/>
         <Text style="-fx-font-size: 18px; -fx-fill: #096505;" text="Seguiment d'Impacte Ambiental"/>
+
+        <!-- Botons amb les opcions -->
+        <VBox spacing="15" alignment="CENTER" maxWidth="400">
+            <Button text="Registrar activitat sostenible"
+                    onAction="#handleRegistrarActivitat"
+                    style="-fx-background-color: #0c8006; -fx-text-fill: white; -fx-font-size: 16px; -fx-min-width: 300px; -fx-min-height: 50px; -fx-background-radius: 5;"/>
+
