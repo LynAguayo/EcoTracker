@@ -14,6 +14,9 @@ import javafx.stage.Stage;
 import java.sql.SQLException;
 
 public class RegistrarActivitatController {
+    /**
+     * Connectar el codi amb els elements visuals del fitxer .fxml
+     */
     @FXML private TextField nameField;
     @FXML private DatePicker datePicker;
     @FXML private ComboBox<String> categoryComboBox;
@@ -21,5 +24,5 @@ public class RegistrarActivitatController {
     @FXML private TextField valueField;
     @FXML private Button backButton;
 
-    
+
 }
