@@ -142,3 +142,26 @@ public class VisualitzarActivitatsController {
             showAlert("Error", "No s'ha pogut eliminar l'activitat: " + e.getMessage());
         }
     }
+
+    // Recàrrega les dades de la bbdd i actualitza la taula i el total de CO2
+    private void refreshData() {
+        // Run database operations in a background thread
+        new Thread(() -> {
+            try {
+                List<Activitat> allActivities = dao.findAll();
+                double total = dao.getTotalCo2Saved();
+
+                // Update UI in the JavaFX Application Thread
+                Platform.runLater(() -> {
+                    activities.setAll(allActivities);
+                    totalCo2Text.setText(String.format("%.2f kg", total));
+                    activitiesTable.refresh(); // Force table refresh
+                });
+            } catch (SQLException e) {
+                Platform.runLater(() -> {
+                    showAlert("Error", "No s'han pogut carregar les activitats: " + e.getMessage());
+                    totalCo2Text.setText("Error");
+                });
+            }
+        }).start();
+    }
