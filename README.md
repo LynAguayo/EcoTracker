@@ -112,7 +112,7 @@ El sistema mostra automàticament el text d'ajuda adequat segons la categoria se
        <dependency>
            <groupId>mysql</groupId>
            <artifactId>mysql-connector-java</artifactId>
-           <version>8.0.27</version>
+           <version>8.0.30</version>
        </dependency>
        
        <!-- JUnit -->
@@ -127,7 +127,7 @@ El sistema mostra automàticament el text d'ajuda adequat segons la categoria se
        <dependency>
            <groupId>org.mockito</groupId>
            <artifactId>mockito-core</artifactId>
-           <version>4.5.1</version>
+           <version>5.18.0</version>
            <scope>test</scope>
        </dependency>
    </dependencies>
