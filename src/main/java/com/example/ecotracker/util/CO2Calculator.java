@@ -9,4 +9,23 @@ public class CO2Calculator {
     private static final double CONSUM_LOCAL_FACTOR = 0.5; // kg CO2 per producte local comprat
     private static final double REUTILITZACIO_FACTOR = 0.4; // kg CO2 per ús d'objectes reutilitzats
 
+    /**
+     * Calcula el CO2 estalviat segons la categoria de l'activitat i el valor introduït
+     * @param category La categoria de l'activitat
+     * @param value El valor introduït per l'usuari
+     * @return CO2 estalviat en Kg
+     */
+    public static double calculateCO2(String category, double value) {
+        return switch (category) {
+            case "Transport" -> value * TRANSPORT_FACTOR;
+            case "Teletreball" -> value * TELETREBALL_FACTOR;
+            case "Reciclatge" -> value * RECICLATGE_FACTOR;
+            case "Energia" -> value * ENERGIA_FACTOR;
+            case "Consum local" -> value * CONSUM_LOCAL_FACTOR;
+            case "Reutilització" -> value * REUTILITZACIO_FACTOR;
+            case "Altres" -> value; // For "Altres", we use the value directly as it's manually entered
+            default -> 0.0;
+        };
+    }
+
 }
