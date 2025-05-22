@@ -240,16 +240,10 @@ Hem implementat un pla de proves complet que combina:
 ### Gestió del Projecte
 Per a una gestió eficient del projecte, hem utilitzat:
 - **GitHub Projects**: Per organitzar i repartir les tasques entre els membres de l'equip
-- **Issues**: Per gestionar dubtes, bugs i millores del projecte
-- **Pull Requests**: Per revisar i integrar els canvis de manera controlada
+- **Issues**: Per gestionar dubtes i millores del projecte
 
 ![GitHub Projects](/docs/github-projects.png)
 ![Issues](/docs/issues.png)
-
-### Organització
-Per a una gestió eficient del projecte, hem utilitzat:
-- **GitHub Projects**: Per organitzar i repartir les tasques entre els membres de l'equip
-- **Issues**: Per gestionar dubtes i millores del projecte
 
 ## 🖼️ Vistes de l'Aplicació
 
