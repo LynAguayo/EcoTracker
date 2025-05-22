@@ -9,40 +9,47 @@ public class CO2Calculator {
     private static final double CONSUM_LOCAL_FACTOR = 0.5; // kg CO2 per producte local comprat
     private static final double REUTILITZACIO_FACTOR = 0.4; // kg CO2 per ús d'objectes reutilitzats
 
-    /**
-     * Calcula el CO2 estalviat segons la categoria de l'activitat i el valor introduït
-     * @param category La categoria de l'activitat
-     * @param value El valor introduït per l'usuari
-     * @return CO2 estalviat en Kg
-     */
+    // Calcula el CO2 estalviat segons la categoria de l'activitat i el valor introduït
     public static double calculateCO2(String category, double value) {
-        return switch (category) {
-            case "Transport" -> value * TRANSPORT_FACTOR;
-            case "Teletreball" -> value * TELETREBALL_FACTOR;
-            case "Reciclatge" -> value * RECICLATGE_FACTOR;
-            case "Energia" -> value * ENERGIA_FACTOR;
-            case "Consum local" -> value * CONSUM_LOCAL_FACTOR;
-            case "Reutilització" -> value * REUTILITZACIO_FACTOR;
-            case "Altres" -> value; // For "Altres", we use the value directly as it's manually entered
-            default -> 0.0;
-        };
+        switch (category) {
+            case "Transport":
+                return value * TRANSPORT_FACTOR;
+            case "Teletreball":
+                return value * TELETREBALL_FACTOR;
+            case "Reciclatge":
+                return value * RECICLATGE_FACTOR;
+            case "Energia":
+                return value * ENERGIA_FACTOR;
+            case "Consum local":
+                return value * CONSUM_LOCAL_FACTOR;
+            case "Reutilització":
+                return value * REUTILITZACIO_FACTOR;
+            case "Altres":
+                return value; // per "altres", s'usa el valor directament
+            default:
+                return 0.0;
+        }
     }
 
-    /**
-     * Retorna un text d'ajuda personalitzat per a cada categoria, que es mostra com a indicació al formulari d'entrada
-     * @param category La categoria seleccionada
-     * @return Text d'ajuda per guiar l'usuari
-     */
+    // Retorna un text d'ajuda personalitzat per a cada categoria
     public static String getInputPrompt(String category) {
-        return switch (category) {
-            case "Transport" -> "¿Quants km has recorregut?";
-            case "Teletreball" -> "¿Quants dies has teletreballat?";
-            case "Reciclatge" -> "¿Quants kg has reciclat?";
-            case "Energia" -> "¿Quantes hores ho has mantingut apagat?";
-            case "Consum local" -> "¿Quants productes locals has comprat?";
-            case "Reutilització" -> "¿Quantes vegades has reutilitzat alguna cosa?";
-            case "Altres" -> "Introdueix el valor de CO2 estalviat (kg):";
-            default -> "Introdueix un valor:";
-        };
+        switch (category) {
+            case "Transport":
+                return "¿Quants km has recorregut?";
+            case "Teletreball":
+                return "¿Quants dies has teletreballat?";
+            case "Reciclatge":
+                return "¿Quants kg has reciclat?";
+            case "Energia":
+                return "¿Quantes hores ho has mantingut apagat?";
+            case "Consum local":
+                return "¿Quants productes locals has comprat?";
+            case "Reutilització":
+                return "¿Quantes vegades has reutilitzat alguna cosa?";
+            case "Altres":
+                return "Introdueix el valor de CO2 estalviat (kg):";
+            default:
+                return "Introdueix un valor:";
+        }
     }
 }
