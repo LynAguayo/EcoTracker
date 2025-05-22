@@ -16,5 +16,10 @@
         <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Button text="← Tornar" onAction="#handleBack" style="-fx-background-color: #0c8006; -fx-text-fill: white;"/>
+        <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Gràfica de CO₂ estalviat per mes"/>
+    </HBox>
+
 
 </VBox>
