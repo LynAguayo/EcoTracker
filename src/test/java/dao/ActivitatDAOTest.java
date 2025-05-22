@@ -23,3 +23,18 @@ class ActivitatDAOTest {
     private Statement mockStatement;
     private ResultSet mockResultSet;
     private ActivitatDAO activitatDAO;
+
+    @BeforeEach
+    void setUp() throws SQLException {
+        // Configuració prèvia dels mocks
+        mockConnection = mock(Connection.class);
+        mockPreparedStatement = mock(PreparedStatement.class);
+        mockStatement = mock(Statement.class);
+        mockResultSet = mock(ResultSet.class);
+        activitatDAO = new ActivitatDAO();
+
+        // Quan es crida a prepareStatement, que retorni el mock preparat
+        when(mockConnection.prepareStatement(anyString())).thenReturn(mockPreparedStatement);
+        when(mockConnection.prepareStatement(anyString(), anyInt())).thenReturn(mockPreparedStatement);
+        when(mockConnection.createStatement()).thenReturn(mockStatement);
+    }
